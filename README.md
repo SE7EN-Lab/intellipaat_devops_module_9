@@ -1,5 +1,4 @@
-# intellipaat_devops_module_9
-#### Kubernetes
+# intellipaat_devops_module_9 - Kubernetes
 #### Problem statement
 Use this github https://github.com/hshar94/helloworld
 1. Create a 3 node setup of kubernetes Master and slave
