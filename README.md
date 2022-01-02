@@ -16,7 +16,22 @@ Pod 2: "Welcome to Pod 2"
 1. Create 3 node k8s cluster
 2. Code k8s manifest files and index.html files
 3. Create config maps for index pages to be served by pods
-4. Create pods / deployments with 2 replicas
+   ```
+   kubectl apply -f configmap/cm_web_one.yml
+   kubectl apply -f configmap/cm_web_two.yml
+   ```
+4. Create deployments with 2 replicas
+   ```
+   kubectl apply -f deployment/deployment_one.yml
+   kubectl apply -f deployment/deployment_two.yml
+   ```
 5. Create services
-6. Deploy ingress controller
+   ```
+   kubectl apply -f service/svc_web_one.yml
+   kubectl apply -f service/svc_web_two.yml
+   ```
+6. Deploy ingress controller - https://docs.nginx.com/nginx-ingress-controller/installation/installation-with-manifests/
 7. Create ingress for services for path based routing
+   ```
+   kubectl apply -f ingress/ing_web.yml
+   ```

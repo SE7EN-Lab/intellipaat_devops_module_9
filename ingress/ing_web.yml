@@ -4,7 +4,7 @@ metadata:
   name: ingress-web
 spec:
   rules:
-    - host: foo.bar.com
+    - host: helloworld.com
       http:
         paths:
           - path: /pod1
