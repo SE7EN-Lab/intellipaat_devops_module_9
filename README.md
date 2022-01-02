@@ -18,4 +18,5 @@ Pod 2: "Welcome to Pod 2"
 3. Create config maps for index pages to be served by pods
 4. Create pods / deployments with 2 replicas
 5. Create services
-6. 
+6. Deploy ingress controller
+7. Create ingress for services for path based routing
