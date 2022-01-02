@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp-one
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: wa-1
+  template:
+    metadata:
+      labels:
+        app: wa-1
+      containers:
+      - name: wa-1
+        image: devopsworkslab/intelli-hello-world:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        volumeMounts:
+        - name: config-volume
+          mountPath: /var/www/html
+        volumes:
+        - name: config-volume
+          configMap:
+            name: cm-web-one
+        ports:
+        - containerPort: 80
