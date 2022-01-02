@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web_one
+spec:
+  containers:
+  - name: web1
+    image: devopsworkslab/intelli-hello-world:latest
+    command: ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+    volumeMounts:
+    - name: config-volume
+      mountPath: /var/www/html
+  volumes:
+  - name: config-volume
+    configMap:
+      name: config-web-one
+  restartPolicy: Never

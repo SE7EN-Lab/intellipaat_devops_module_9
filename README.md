@@ -11,3 +11,11 @@ Pod 2: "Welcome to Pod 2"
 6. Setup path based routing on these services, which can be accessed from the outside
 "/pod1" --> service 1
 "/pod2" --> service 2
+
+#### Steps
+1. Create 3 node k8s cluster
+2. Code k8s manifest files and index.html files
+3. Create config maps for index pages to be served by pods
+4. Create pods / deployments with 2 replicas
+5. Create services
+6. 
